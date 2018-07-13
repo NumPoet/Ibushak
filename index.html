@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="Examen de Hemoglobina" content="Esta es una pequeña prueba para
+                                                identificar si un paciente tiene anemia o no">
+    <meta name="NumPoet" content="softwareDeveloper">
+
+    <title>Ibushack Apply</title>
+
+    <!-- Bootstrap core CSS.  Personalmente me gusta usar mucho Bootstrap ayuda bastante a  resolver
+        temas de responsibidad y desiciones estéticas-->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div id="wrapper" class="container-fluid">
+
+        <!-- Sidebar.  Por una decisión estética agregue el formulario en un side bar que tiene un poco de movimiento
+                para darle una sensación más dinámica a la pequeña app-->
+        <div id="sidebar-wrapper" >
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#" class="text-center">
+                        Prueba de Anemia
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="h5 text-center">Ingresa tu información</a>
+                </li>
+                <li>
+                    <form class="needs-validation" method="post" name="formu" id="formu" >
+                      <div class="form-group">
+                        <input type="text" class="form-control" name="nombre" value=""id="exampleInputName" for="validationCustom01" placeholder="Escribe tu nombre" required>
+                      </div>
+
+                      <div class="form-group">
+                        <input type="text" class="form-control" name="edad" value="" size="2" maxlength="3" id="exampleInputEdad" placeholder="Escribe tu edad" required>
+                      </div>
+                      <fieldset class="form-group text-white">
+                        <div class="row">
+                          <legend class="col-form-label col-sm-2 pt-0">Sexo</legend>
+                          <div class="col-sm-10">
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadiosH" value="M" >
+                              <label class="form-check-label" for="gridRadiosH">
+                                Mujer
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadiosM" value="H">
+                              <label class="form-check-label" for="gridRadiosM">
+                                Hombre
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </fieldset>
+                      <div class="form-group">
+                        <input type="text" class="form-control" name="hemo" value="" id="exampleInputNivel" placeholder="Nivel de Hemoglobina" required>
+                      </div>
+                      <button type="submit" id="myButton" class="btn btn-primary align-content-center">Resultado</button>
+                    </form>
+                </div>
+                </li>
+            </ul>
+            <div>
+
+        </div>
+
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content   Agrego la tabla con los niveles de Hemoglobina para darle un poco más de contenido
+            al body  y para  darle referencias al usuario-->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <h1 class="text-center">Prueba para saber si tienes anemia</h1>
+                <p class="text-lg-center">Esta es una implementación hipotética sobre lo que puede ser
+                una aplicación que te ayuda a saber si tienes o no tienes anemia. </p>
+                 <!--    Table of Hemoglobina levels     -->
+                <div>
+                    <h5>Niveles de hemoglobina respecto a la edad</h5 >
+                    <table class="table table-striped text-center">
+                      <thead  class="thead-dark">
+                        <tr>
+                          <th scope="col">Edad</th>
+                          <th scope="col">Nivel de Hemoglobina</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>0 - 1 mes</td>
+                          <td>13% - 26% gb</td>
+                        </tr>
+                        <tr>
+                          <td>>1  y <= 6 meses</td>
+                          <td>10% - 18% gb</td>
+                        </tr>
+                        <tr>
+                          <td>>6  y <= 12 meses</td>
+                          <td>11% - 15% gb</td>
+                        </tr>
+                        <tr>
+                          <td>>1  y <= 5 años</td>
+                          <td>11.5 % - 15% gb</td>
+                        </tr>
+                        <tr>
+                          <td>>5  y <= 10 años</td>
+                          <td>12.6 % - 15.5% gb</td>
+                        </tr>
+                        <tr>
+                          <td>>10  y <= 15 años</td>
+                          <td>13 % - 15.5% gb</td>
+                        </tr>
+                        <tr>
+                          <td>mujeres > 15 años</td>
+                          <td>12 % - 16% gb</td>
+                        </tr>
+                        <tr>
+                          <td>hombres > 15 años</td>
+                          <td>14 % - 18% gb</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                </div>
+                <p class="text-center h5">Da click al botón de aquí abajo</p>
+                <a href="#menu-toggle" class="btn btn-block btn-secondary btn-lg btn-outline-primary"
+                id="menu-toggle">¿Quieres saber si tienes anemia?</a>
+            </div>
+                <div>
+                <p id="respuesta"></p>
+                </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js">
+
+    </script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+
+    </script>
+
+
+</body>
+</html>

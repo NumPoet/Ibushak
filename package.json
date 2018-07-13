@@ -1,0 +1,28 @@
+{
+    "title": "Ibuchak-apply",
+    "name": "Ibuchak-apply",
+    "version": "0.0.1",
+    "description": "A simple hipotetic app to detect anemia",
+    "keywords": [
+        "css",
+        "sass",
+        "html",
+        "responsive",
+        "theme",
+        "template"
+    ],
+    "homepage": "http://numpoet.com",
+    "license": "MIT",
+    "author": "NumPoet",
+    "dependencies": {
+        "bootstrap": "4.1.1",
+        "jquery": "3.3.1"
+    },
+    "devDependencies": {
+        "browser-sync": "2.24.5",
+        "gulp": "^3.9.1"
+    },
+    "scripts":{
+        "start": "gulp"
+    }
+}
